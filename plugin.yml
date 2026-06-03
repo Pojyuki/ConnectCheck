@@ -1,0 +1,8 @@
+﻿name: ConnectCheck
+main: Pozac\ConnectCheck\Main
+version: 1.0.0
+api: 5.0.0
+author:
+  - Pozac
+  - Codex
+description: Measure player ping on join and provide connection quality feedback
