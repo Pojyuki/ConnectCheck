@@ -1,0 +1,23 @@
+# ConnectCheck Configuration
+# Ping measurement settings
+sampling:
+  interval_ticks: 20  # 20 ticks = ~1 second
+  total_samples: 3     # take 3 samples then average
+
+# Ping thresholds (ms) - messages will use the first matching category
+thresholds:
+  excellent: 35   # 0–34 ms
+  good: 70        # 35–69 ms
+  fair: 100       # 70–99 ms
+  poor: 200       # 100–199 ms
+  # >= 200 → very_poor
+
+# Messages sent to player (chat only)
+# Use {ping} as placeholder for the average ping value
+messages:
+  na: "§e⚡ Ping: N/A — Still measuring your connection, please wait..."
+  excellent: "§a⚡ Ping: {ping}ms — Your connection is Excellent! Gameplay will feel buttery smooth."
+  good: "§2⚡ Ping: {ping}ms — Your connection is Good. Everything should be responsive."
+  fair: "§6⚡ Ping: {ping}ms — Your connection is Fair. You may notice slight delays occasionally."
+  poor: "§c⚡ Ping: {ping}ms — Your connection is Poor. Lag will be noticeable; consider using a wired connection."
+  very_poor: "§4⚡ Ping: {ping}ms — Your connection is Very Poor. Severe lag expected; check your internet."
